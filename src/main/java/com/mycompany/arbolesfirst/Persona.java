@@ -49,4 +49,10 @@ public class Persona {
     public void setEdad(int edad){
         this.edad=edad;
     }
+    
+    @Override
+    ///simplemente para implementarlo
+    public String toString(){
+        return "persona";
+    }
 }

@@ -10,4 +10,27 @@ package com.mycompany.arbolesfirst;
  */
 public class Arbol {
     
+    private Nodo raiz;
+    
+    public Arbol(){
+        raiz=null;
+    }
+    public Arbol(Nodo raiz){
+        this.raiz=raiz;
+    }
+    public static Nodo crearSegmento(Nodo anterior, Object info,Nodo siguiente){
+        ///derecha izquierda info(parametros del constructor)
+        return new Nodo(siguiente,anterior,info);
+    }
+    public boolean isEmty(){
+        if(raiz==null){
+            return true;
+        }
+        else{
+            return false;
+        }
+       
+    
+    }
+    
 }

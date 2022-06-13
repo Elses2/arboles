@@ -21,6 +21,12 @@ public class Nodo {
         siguiente=anterior=null;
         info=null;
     }
+    public Nodo(Nodo seguiente,Nodo anterior, Object info){
+        this.anterior=anterior;
+        this.siguiente=siguiente;
+        this.info=info;
+    
+    }
 
   
     public Nodo getSiguiente() {
