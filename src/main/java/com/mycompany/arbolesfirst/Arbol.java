@@ -18,19 +18,45 @@ public class Arbol {
     public Arbol(Nodo raiz){
         this.raiz=raiz;
     }
-    public static Nodo crearSegmento(Nodo anterior, Object info,Nodo siguiente){
-        ///derecha izquierda info(parametros del constructor)
-        return new Nodo(siguiente,anterior,info);
+/// esta copiado, fruta en realidad es persona
+     public void insertar(int i, Object fruta){
+        Nodo n = new Nodo(i);
+        n.setInfo(fruta);
+        
+        //SI LA RAIZ ES NULA SIGNIFICA QUE NO HA EMPEZADO A CRECER EL ARBOL
+        if (raiz==null) {
+            raiz=n;
+        }else{
+            // DE LO CONTRARIO CREAMO UN NO AUXILIAR ARA BUSCAR EN DONDE COLOCARLO, SI A LA DER O IZQ
+            Nodo aux = raiz;
+            //MIENTRAS EL AUXILIAR NO SEA NULO HAGAMOS QUE EL PADRE DEL NODO SEA EL AUXILIAR,
+            //ASI VAMOS SUBIENDO EN EL ARBOL
+            while(aux != null){
+                
+                n.setPadre(aux);
+                //VALIDAMOS, SI EL INDICE ES MAYOR ENTONCES VA A LA DERECHA
+                if (n.getLlave() >= n.getLlave()) {
+                    aux=aux.getDerecha();
+                }else{
+                    //SI NO VA A LA IZQUIERDA
+                    aux=aux.getIzquierda();
+                }
+            }
+            //si la llave del nodo actual es menor al indice del nodo padre entonces enlazo la direccion
+            //dentro del arbol
+            if (n.getLlave() < n.getPadre().getLlave()) {
+                n.getPadre().setIzquierda(n);
+            }else{
+                n.getPadre().setDerecha(n);
+            }
+        }
     }
-    public boolean isEmty(){
-        if(raiz==null){
-            return true;
+     public void recorrer(Nodo n){
+        if (n != null) {
+            recorrer(n.getIzquierda());
+            System.out.println("Indice " +n.getLlave()+" persona " + n.getInfo());
+            recorrer(n.getDerecha());
         }
-        else{
-            return false;
-        }
-       
-    
     }
     
 }
