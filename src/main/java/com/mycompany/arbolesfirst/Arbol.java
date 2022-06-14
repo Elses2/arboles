@@ -18,12 +18,12 @@ public class Arbol {
     public Arbol(Nodo raiz){
         this.raiz=raiz;
     }
-/// esta copiado, fruta en realidad es persona
+     /// esta copiado, fruta en realidad es persona
      public void insertar(int i, Object fruta){
         Nodo n = new Nodo(i);
         n.setInfo(fruta);
         
-        //SI LA RAIZ ES NULA SIGNIFICA QUE NO HA EMPEZADO A CRECER EL ARBOL
+        //SI LA RAIZ ES SNULA SIGNIFICA QUE NO HA EMPEZADO A CRECER EL ARBOL
         if (raiz==null) {
             raiz=n;
         }else{
