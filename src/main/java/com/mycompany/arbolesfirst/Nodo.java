@@ -19,7 +19,7 @@ public class Nodo {
     }
     public Nodo(Nodo seguiente,Nodo anterior,Nodo padre, Object info){
         this.izquierda=anterior;
-        this.derecha=derecha;
+        this.derecha=seguiente;
         this.padre=padre;
         this.info=info;
     

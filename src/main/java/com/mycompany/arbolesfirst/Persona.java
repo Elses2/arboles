@@ -53,6 +53,7 @@ public class Persona {
     @Override
     ///simplemente para implementarlo
     public String toString(){
-        return "persona";
+        return "\n"+"nombre:"+name+"\n"+"edad:"+edad+"\n"+"Inscripto"+inscripto+"\n"+"id:"+id ;
+                
     }
 }

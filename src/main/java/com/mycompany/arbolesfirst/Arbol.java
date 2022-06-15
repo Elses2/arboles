@@ -54,7 +54,7 @@ public class Arbol {
      public void recorrer(Nodo n){
         if (n != null) {
             recorrer(n.getIzquierda());
-            System.out.println("Indice " +n.getLlave()+" persona " + n.getInfo());
+            System.out.println("Indice " +n.getLlave()+" persona " + n.getInfo().toString());
             recorrer(n.getDerecha());
         }
     }
