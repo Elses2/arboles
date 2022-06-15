@@ -18,6 +18,9 @@ public class Arbol {
     public Arbol(Nodo raiz){
         this.raiz=raiz;
     }
+    public Nodo getRaiz(){
+        return raiz;
+    }
      /// esta copiado, fruta en realidad es persona
      public void insertar(int i, Object fruta){
         Nodo n = new Nodo(i);
@@ -54,7 +57,7 @@ public class Arbol {
      public void recorrer(Nodo n){
         if (n != null) {
             recorrer(n.getIzquierda());
-            System.out.println("Indice " +n.getLlave()+" persona " + n.getInfo().toString());
+            System.out.println("Nodo: " +n.getLlave()+" persona: " + n.getInfo().toString());
             recorrer(n.getDerecha());
         }
     }

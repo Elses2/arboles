@@ -12,7 +12,6 @@ public class Persona {
     private int id;
     private String name;
     private int edad;
-    private boolean inscripto;
     
     
     public Persona(String name,int edad,int id){
@@ -20,7 +19,6 @@ public class Persona {
         this.id=id;
         this.name=name;
         this.edad=edad;
-        this.inscripto =true;
     
     }
     public String getName(){
@@ -53,7 +51,7 @@ public class Persona {
     @Override
     ///simplemente para implementarlo
     public String toString(){
-        return "\n"+"nombre:"+name+"\n"+"edad:"+edad+"\n"+"Inscripto"+inscripto+"\n"+"id:"+id ;
+        return "\n"+"nombre:"+name+"\n"+"edad:"+edad+"\n"+"id:"+id ;
                 
     }
 }
